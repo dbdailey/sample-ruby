@@ -1,4 +1,3 @@
-import Ract from 'react';
 require 'sinatra';
 require 'cowsay';
 
