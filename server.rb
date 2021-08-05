@@ -9,7 +9,7 @@ configure {
 }
 
 get '/' do
-  content_type "text/plain"
+  #content_type "text/plain"
   message = params[:message]
   if message == nil
     message = "Set a message by adding ?message=<message here> to the URL"
