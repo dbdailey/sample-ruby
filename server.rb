@@ -2,7 +2,7 @@ require 'sinatra'
 require 'cowsay'
 
 port = ENV["PORT"] || "8080"
-configure { 
+configure {
   set :server, :puma
   set :bind, '0.0.0.0'
   set :port, port
@@ -15,5 +15,5 @@ get '/' do
     message = "Set a message by adding ?message=<message here> to the URL"
   end
 
-  Cowsay.say(message, "random")
+  Cowsay.say(message + ": This is my message", "random")
 end
