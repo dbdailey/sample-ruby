@@ -1,5 +1,6 @@
-require 'sinatra'
-require 'cowsay'
+import Ract from 'react';
+require 'sinatra';
+require 'cowsay';
 
 port = ENV["PORT"] || "8080"
 configure {
@@ -16,4 +17,5 @@ get '/' do
   end
 
   Cowsay.say(message + ": This is my message", "random")
+  erb :index
 end
